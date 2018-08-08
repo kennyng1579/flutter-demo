@@ -4,6 +4,7 @@ import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 import './map.dart';
 import './web.dart';
 
+
 var api_key = "AIzaSyAtSYZoWvxRujTbQjZ1PM10exOg9nKDx_k";
 
 void main() {
@@ -54,76 +55,88 @@ class HomePageState extends State<HomePage> with SingleTickerProviderStateMixin{
 
         ),
       backgroundColor: Colors.white,
-      body: new Stack(
-        fit: StackFit.expand,
-        children: <Widget>[
-          // new Image(
-          //   image: new AssetImage("assets/lol.jpg"),
-          //   fit: BoxFit.cover,
-          //   color: Colors.black54,
-          //   colorBlendMode: BlendMode.darken,
-          // ),
-          new Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              // new FlutterLogo(
-              //   size: 100.0,
-              // ),
-              new Form(
-                child: new Theme(
-                  data: new ThemeData(
-                    brightness: Brightness.light,
-                    primarySwatch: Colors.red,
-                    inputDecorationTheme: new InputDecorationTheme(
-                      labelStyle: new TextStyle(
-                        color: Colors.red,
-                        fontSize: 20.0,
-                      ),
-                      
-                    ),
-                  ),
-                  child : new Container(
-                    padding: const EdgeInsets.all(20.0),
-                    child: new Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: <Widget>[
+      body: new SingleChildScrollView(
+        padding: const EdgeInsets.all(20.0),
+        child: new Column(
+          
+          children: <Widget>[
                       new TextFormField(
                         decoration: new InputDecoration(
                           hintText: "目的地點",
+                          contentPadding: new EdgeInsets.all(10.0),
+                          border: new OutlineInputBorder(
+                            borderRadius: new BorderRadius.circular(5.0),
+                          ),
                         ),
                         keyboardType: TextInputType.text,
+                      ),
+                      new Padding(
+                        padding: const EdgeInsets.only(top: 10.0),
                       ),
                       new TextFormField(
                         decoration: new InputDecoration(
-                          hintText: "付款方式"
+                          hintText: "付款方式",
+                          contentPadding: new EdgeInsets.all(10.0),
+                          border: new OutlineInputBorder(
+                            borderRadius: new BorderRadius.circular(5.0),
+                          ),
                         ),
                         keyboardType: TextInputType.text,
+                      ),
+                      new Padding(
+                        padding: const EdgeInsets.only(top: 10.0),
                       ),
                       new TextFormField(
                         decoration: new InputDecoration(
-                          hintText: "聯絡電話"
+                          hintText: "聯絡電話",
+                          contentPadding: new EdgeInsets.all(10.0),
+                          border: new OutlineInputBorder(
+                            borderRadius: new BorderRadius.circular(5.0),
+                          ),
                         ),
                         keyboardType: TextInputType.text,
+                      ),
+                      new Padding(
+                        padding: const EdgeInsets.only(top: 10.0),
                       ),
                       new TextFormField(
                         decoration: new InputDecoration(
-                          hintText: "隧道"
+                          hintText: "隧道",
+                          contentPadding: new EdgeInsets.all(10.0),
+                          border: new OutlineInputBorder(
+                            borderRadius: new BorderRadius.circular(5.0),
+                          ),
                         ),
                         keyboardType: TextInputType.text,
+                      ),
+                      new Padding(
+                        padding: const EdgeInsets.only(top: 10.0),
                       ),
                       new TextFormField(
                         decoration: new InputDecoration(
-                          hintText: "備註"
+                          hintText: "備註",
+                          contentPadding: new EdgeInsets.all(10.0),
+                          border: new OutlineInputBorder(
+                            borderRadius: new BorderRadius.circular(5.0),
+                          ),
                         ),
                         keyboardType: TextInputType.text,
                       ),
+                      new Padding(
+                        padding: const EdgeInsets.only(top: 10.0),
+                      ),
+
                       new TextFormField(
                         decoration: new InputDecoration(
                           hintText: "其他要求",
-                          
+                          contentPadding: new EdgeInsets.all(10.0),
+                          border: new OutlineInputBorder(
+                            borderRadius: new BorderRadius.circular(5.0),
+                          ),
                         ),
                         keyboardType: TextInputType.text,
                       ),
+
                       new Padding(
                         padding: const EdgeInsets.only(top: 20.0),
                       ),
@@ -153,6 +166,7 @@ class HomePageState extends State<HomePage> with SingleTickerProviderStateMixin{
                             );
                         },
                       ),
+
                       new Padding(
                         padding: const EdgeInsets.only(top: 20.0),
                       ),
@@ -168,17 +182,9 @@ class HomePageState extends State<HomePage> with SingleTickerProviderStateMixin{
                             MaterialPageRoute(builder: (context) => WebPage())
                             );
                         },
-                      ),
-                      
-                    ]
-                ),
-                  )
-                )
-                
-              )
-            ],
-          )
-        ],  
+                      )
+          ],
+        ),
       )
     );
   }

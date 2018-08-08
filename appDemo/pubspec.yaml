@@ -11,6 +11,10 @@ dependencies:
   map_view: 
   geocoder: ^0.0.1
   flutter_webview_plugin: ^0.1.6
+  google_maps_flutter:
+    git:
+      url: git://github.com/flutter/plugins
+      path: packages/google_maps_flutter
 
 dev_dependencies:
   flutter_test:

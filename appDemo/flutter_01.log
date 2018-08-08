@@ -1,0 +1,90 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+String: Exit code 20 from: /Users/temporary/Library/Android/sdk/platform-tools/adb -s emulator-5554 uninstall com.example.mobileapp:
+cmd: Can't find service: package
+
+```
+#0      runCheckedAsync (package:flutter_tools/src/base/process.dart:249)
+<asynchronous suspension>
+#1      AndroidDevice.uninstallApp (package:flutter_tools/src/android/android_device.dart:308)
+<asynchronous suspension>
+#2      AndroidDevice._installLatestApp (package:flutter_tools/src/android/android_device.dart:332)
+<asynchronous suspension>
+#3      AndroidDevice.startApp (package:flutter_tools/src/android/android_device.dart:388)
+<asynchronous suspension>
+#4      FlutterDevice.runHot (package:flutter_tools/src/resident_runner.dart:292)
+<asynchronous suspension>
+#5      HotRunner.run (package:flutter_tools/src/run_hot.dart:241)
+<asynchronous suspension>
+#6      RunCommand.runCommand (package:flutter_tools/src/commands/run.dart:400)
+<asynchronous suspension>
+#7      FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:347)
+#8      _asyncThenWrapperHelper.<anonymous closure> (dart:async-patch/dart:async/async_patch.dart:77)
+#9      _rootRunUnary (dart:async/zone.dart:1134)
+#10     _CustomZone.runUnary (dart:async/zone.dart:1031)
+#11     _FutureListener.handleValue (dart:async/future_impl.dart:129)
+#12     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:638)
+#13     Future._propagateToListeners (dart:async/future_impl.dart:667)
+#14     Future._complete (dart:async/future_impl.dart:472)
+#15     _SyncCompleter.complete (dart:async/future_impl.dart:51)
+#16     _AsyncAwaitCompleter.complete (dart:async-patch/dart:async/async_patch.dart:28)
+#17     _completeOnAsyncReturn (dart:async-patch/dart:async/async_patch.dart:292)
+#18     RunCommand.usageValues (package:flutter_tools/src/commands/run.dart:211)
+#19     _asyncThenWrapperHelper.<anonymous closure> (dart:async-patch/dart:async/async_patch.dart:77)
+#20     _rootRunUnary (dart:async/zone.dart:1134)
+#21     _CustomZone.runUnary (dart:async/zone.dart:1031)
+#22     _FutureListener.handleValue (dart:async/future_impl.dart:129)
+#23     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:638)
+#24     Future._propagateToListeners (dart:async/future_impl.dart:667)
+#25     Future._complete (dart:async/future_impl.dart:472)
+#26     _SyncCompleter.complete (dart:async/future_impl.dart:51)
+#27     _AsyncAwaitCompleter.complete.<anonymous closure> (dart:async-patch/dart:async/async_patch.dart:33)
+#28     _rootRun (dart:async/zone.dart:1126)
+#29     _CustomZone.run (dart:async/zone.dart:1023)
+#30     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:949)
+#31     _microtaskLoop (dart:async/schedule_microtask.dart:41)
+#32     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50)
+#33     _runPendingImmediateCallback (dart:isolate-patch/dart:isolate/isolate_patch.dart:113)
+#34     _RawReceivePortImpl._handleMessage (dart:isolate-patch/dart:isolate/isolate_patch.dart:166)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel dev, v0.5.7, on Mac OS X 10.13.6 17G65, locale en-US)
+    • Flutter version 0.5.7 at /Users/temporary/Desktop/flutter/flutter
+    • Framework revision 66091f9696 (4 weeks ago), 2018-07-09 12:52:41 -0700
+    • Engine revision 6fe748490d
+    • Dart version 2.0.0-dev.63.0.flutter-4c9689c1d2
+
+[✓] Android toolchain - develop for Android devices (Android SDK 28.0.0)
+    • Android SDK at /Users/temporary/Library/Android/sdk
+    • Android NDK location not configured (optional; useful for native profiling support)
+    • Platform android-28, build-tools 28.0.0
+    • Java binary at: /Applications/Android Studio.app/Contents/jre/jdk/Contents/Home/bin/java
+    • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1024-b01)
+    • All Android licenses accepted.
+
+[✓] iOS toolchain - develop for iOS devices (Xcode 9.4.1)
+    • Xcode at /Applications/Xcode.app/Contents/Developer
+    • Xcode 9.4.1, Build version 9F2000
+    • ios-deploy 1.9.2
+    • CocoaPods version 1.5.3
+
+[✓] Android Studio (version 3.1)
+    • Android Studio at /Applications/Android Studio.app/Contents
+    • Flutter plugin version 26.0.1
+    • Dart plugin version 173.4700
+    • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1024-b01)
+
+[✓] Connected devices (1 available)
+    • Android SDK built for x86 • emulator-5554 • android-x86 • Android 9 (API 28) (emulator)
+
+• No issues found!
+```
